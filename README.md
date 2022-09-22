@@ -68,5 +68,6 @@
   <img src="https://imgur.com/T1Aosof.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
 <br />
 <br />
- 
+ <h2> Writing Yara Rules Instructions:</h2>
+<p align="center">
 
