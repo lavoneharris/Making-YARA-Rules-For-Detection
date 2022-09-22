@@ -1,5 +1,4 @@
-# Making-YARA-Rules-For-Detection
-<h1>Setting up a Firewall Lab</h1>
+<h1>Making Yara Rules for Detection Lab</h1>
 
 
 <h2>Description</h2>
