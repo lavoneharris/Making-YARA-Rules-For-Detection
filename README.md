@@ -2,22 +2,18 @@
 
 
 <h2>Description</h2>
+This YARA Rule Lab consist of installing YARA on a Linux environment via Virtualization. We will both write our own rules and also automatically generate rules using yarGen. <br>
 
-
-
-<br />
 
 
 <h2>What are YARA Rules:</h2>
-
-
-
-
+YARA rules are like a piece of programming language, they work by defining a number of variables that contain patterns found in a sample of malware. If some or all of the conditions are met, depending on the rule, then it can be used to successfully identify a piece of malware.
 
 <br />
 
 <h2>Why are YARA Rules Important:</h2>
-
+YARA rules are used to classify and identify malware samples by creating descriptions of malware families based on textual or binary patterns.
+<br />
 <h2>Utilities Used:</h2>
 - Oracle Virtual Box <br>
 - Linux Terminal <br>
