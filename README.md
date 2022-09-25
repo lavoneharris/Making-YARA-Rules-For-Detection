@@ -70,7 +70,48 @@
 <br />
  <h2> Writing Yara Rules Instructions:</h2>
 <p align="center">
-
+Yara rules must have three core components that must be included. <br />
+Rules: 1. Rule Name <br />
+       2. Identification Values (characteristics the rule is searching for)<br />
+       3. Condition (defines the condition that the file will be flagged )<br />
+Lets create a very simple Yara rule. <br />
+ 1. Lets install a text editor,  by going to terminal and entering the commman sudo snap install notepad-plus-plus. Note we can already use mousepad if already installed on Linux.
+ 2. Write the Yara Rule. We will save it as HelloString.txt but we will need to change the file extension to .yara to run properly. See screenshot of Yara Rule if further assistanmce is needed.<br />
+YARA Rule (Line Breakdown)
+ Line 1: We defined the rule name as "HelloString" with a short name of Hello. <br />
+ Line 3: Declares a file property, this is a text string that will be present in the file. $a variable holds the value of Hello. <br />
+ Line 6: Declares the condition that needs to be met to flag the file. $a means if any file scanned containing the string Hello will be flagged. <br />
+ 3. Create a folder named YARA Demo.<br />
+ 4. Create a sample file called asdf.txt, that will have the string Hello in it. <br />
+ 5. In Terminal, lets run the command yara HelloString.yara /root/Desktop/YARA\ Demo to see if it flags the file asdf.txt. <br />
+ 6. We get a error message. After a day I was able to determine this was I was not storing in the root directory, We will need to do this for both files we created. <br />
+ 7. We will run the command yara HelloString.yara /root/Desktop/YARA\ Demo again in Terminal. Now you can see it flagged the file asdf.txt. <br>
+ 8. Run the command again but adding -m to the command so it reads in Terminal: yara -m HelloString.yara /root/Desktop/YARA\ Demo. This now provides the meta information for the rule. <br>
+9. Now lets expand on our rule by adding new variables to the HelloString.yara file as below using the "OR" clause. <br>
+10. Note that in conditions of the .yara file we can use the clauses "AND" & "OR" <br>
+ OR = Allow the rule to flag any files that contain any of the strings.<br>
+ AND = Allow the rule to flag any files that contain at least two of the strings.<br>
+11. Lets create two new text files. We will run the command in Terminal again yara -m HelloString.yara /root/Desktop/YARA\ Demo.You will see it flagged. Note: how only two were flagged becuase the file message.txt says "HELLO" and not "hello" so conditions are not met.
+12. Now lets expand on our rule by adding new variables to the HelloString.yara file as below using the "AND" clause. <br>
+13. Run the command again but adding -m and -s to the command so it reads in Terminal: yara -m -s HelloString.yara /root/Desktop/YARA\ Demo. This now provides the meta information amd prints the matching strings for the rule. <br>
+ YARA flags:<br>
+ -m // Prints the associated meta information to the terminal after a YARA scan.<br>
+ -s // Prints the matching strings to the terminal after a YARA scan.<br>
+-r // Recursively scan all subfolders within the target location to ensure everything is scanned.<br>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ To ensure everything is installed properly we we will run the following command. <br>
+  Use Command:<br>
+ make check <br>
+  If everything installed properly everything should pass like the image below. <br>
+  <img src="https://imgur.com/T1Aosof.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+<br />
+<br />
 
  
  
