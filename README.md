@@ -71,7 +71,8 @@
  <h2> Writing Yara Rules Instructions:</h2>
 <p align="center">
 Yara rules must have three core components that must be included. <br />
-Rules: 1. Rule Name <br />
+Rules: <br>
+ 1. Rule Name <br />
        2. Identification Values (characteristics the rule is searching for)<br />
        3. Condition (defines the condition that the file will be flagged )<br />
 Lets create a very simple Yara rule. <br />
