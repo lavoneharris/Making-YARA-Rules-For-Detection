@@ -35,22 +35,27 @@
  1. We will need to download YARA on our Linux VM. Begin by downloading the .tar.gz file from the YARA github Link: https://github.com/virustotal/yara/releases/tag/v4.0.2. <br>
   Note: Make sure that this file is downloaded on the Kali Linux VM
 <br/>
-<img src="https://imgur.com/T1Aosof.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+<img src="259.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+ <img src="260.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+ <img src="261.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
 <br />
 <br />
 2. Once the .tar.gz file has been downloaded we will need to install it via Terminal. <br> 
-  Use command:<br> sudo -i <br>
-               sudo apt-get install automake libtool make gcc pkg-config
+  Use command:<br> 
+ cd Downloads<br>
+  sudo apt-get install automake libtool make gcc pkg-config
   <br/>
-<img src="https://imgur.com/T1Aosof.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+<img src="262.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+ <img src="263.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
 <br />
 <br />
- 3. Now run commandsin the following order. <br>
+ 3. Now run commands in the following order. <br>
   Use Commands:<br> 
  tar -zxf yara-4.0.2.tar.gz  <br>
                 cd yara-4.0.2/  <br>
                ./bootstrap.sh  <br>
- <img src="https://imgur.com/T1Aosof.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+ <img src="264.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+ <img src="265.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
 <br />
 <br />
  4. Next we will need compile and install with these 3 commands. <br>
@@ -58,17 +63,25 @@
                     ./configure <br>
                       make <br>
                 sudo make install <br>
-  <img src="https://imgur.com/T1Aosof.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+  <img src="266.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+ <img src="267.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+ <img src="268.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
 <br />
 <br />
 5. To ensure everything is installed properly we we will run the following command. <br>
   Use Command:<br>
  make check <br>
   If everything installed properly everything should pass like the image below. <br>
-  <img src="https://imgur.com/T1Aosof.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+  <img src="269.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+ <img src="270.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
 <br />
 <br />
- <h2> Writing Yara Rules Instructions:</h2>
+
+
+
+
+
+<h2> Writing Yara Rules Instructions:</h2>
 <p align="center">
 Yara rules must have three core components that must be included. <br />
 Rules: <br>
@@ -77,40 +90,72 @@ Rules: <br>
        3. Condition (defines the condition that the file will be flagged )<br />
 Lets create a very simple Yara rule. <br />
  1. Lets install a text editor,  by going to terminal and entering the commman sudo snap install notepad-plus-plus. Note we can already use mousepad if already installed on Linux.
- 2. Write the Yara Rule. We will save it as HelloString.txt but we will need to change the file extension to .yara to run properly. See screenshot of Yara Rule if further assistanmce is needed.<br />
-YARA Rule (Line Breakdown)
+  <img src="272.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+<br />
+<br />
+ 2. Lets write the Yara Rule. We will save it as HelloString.txt but we will need to change the file extension to .yara to run properly. See screenshot of Yara Rule if further assistanmce is needed.<br />
+  <img src="273.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+  <img src="274.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+  <img src="275.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+<br />
+<br />
+YARA Rule (Line Breakdown)<br />
  Line 1: We defined the rule name as "HelloString" with a short name of Hello. <br />
  Line 3: Declares a file property, this is a text string that will be present in the file. $a variable holds the value of Hello. <br />
  Line 6: Declares the condition that needs to be met to flag the file. $a means if any file scanned containing the string Hello will be flagged. <br />
  3. Create a folder named YARA Demo.<br />
+   <img src="276.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+ <br />
+<br />
  4. Create a sample file called asdf.txt, that will have the string Hello in it. <br />
+   <img src="278.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+ <br />
+<br />
  5. In Terminal, lets run the command yara HelloString.yara /root/Desktop/YARA\ Demo to see if it flags the file asdf.txt. <br />
+    <img src="281.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+   <img src="282.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+ <br />
+<br />
  6. We get a error message. After a day I was able to determine this was I was not storing in the root directory, We will need to do this for both files we created. <br />
+    <img src="288.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+   <img src="289.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+ <br />
+<br />
  7. We will run the command yara HelloString.yara /root/Desktop/YARA\ Demo again in Terminal. Now you can see it flagged the file asdf.txt. <br>
+    <img src="290.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+ <br />
+<br />
  8. Run the command again but adding -m to the command so it reads in Terminal: yara -m HelloString.yara /root/Desktop/YARA\ Demo. This now provides the meta information for the rule. <br>
+    <img src="293.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+ <br />
+<br />
 9. Now lets expand on our rule by adding new variables to the HelloString.yara file as below using the "OR" clause. <br>
+    <img src="294.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+ <br />
+<br />
 10. Note that in conditions of the .yara file we can use the clauses "AND" & "OR" <br>
  OR = Allow the rule to flag any files that contain any of the strings.<br>
  AND = Allow the rule to flag any files that contain at least two of the strings.<br>
-11. Lets create two new text files. We will run the command in Terminal again yara -m HelloString.yara /root/Desktop/YARA\ Demo.You will see it flagged. Note: how only two were flagged becuase the file message.txt says "HELLO" and not "hello" so conditions are not met.
+11. Lets create two new text files. We will run the command in Terminal again yara -m HelloString.yara /root/Desktop/YARA\ Demo.You will see it flagged. Note: How only two were flagged becuase the file message.txt says "HELLO" and not "hello" so conditions are not met.
+    <img src="297.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+   <img src="298.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+   <img src="300.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+   <img src="301.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+ <br />
+<br />
 12. Now lets expand on our rule by adding new variables to the HelloString.yara file as below using the "AND" clause. <br>
+    <img src="302.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+ <br />
+<br />
 13. Run the command again but adding -m and -s to the command so it reads in Terminal: yara -m -s HelloString.yara /root/Desktop/YARA\ Demo. This now provides the meta information amd prints the matching strings for the rule. <br>
+    <img src="303.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+   <img src="304.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+ <br />
+<br />
  YARA flags:<br>
  -m // Prints the associated meta information to the terminal after a YARA scan.<br>
  -s // Prints the matching strings to the terminal after a YARA scan.<br>
 -r // Recursively scan all subfolders within the target location to ensure everything is scanned.<br>
- 
- 
- 
- 
- 
- 
- 
- To ensure everything is installed properly we we will run the following command. <br>
-  Use Command:<br>
- make check <br>
-  If everything installed properly everything should pass like the image below. <br>
-  <img src="https://imgur.com/T1Aosof.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
 <br />
 <br />
 
@@ -155,9 +200,18 @@ YARA Rule (Line Breakdown)
 If you run into any issues with yargen or its dependencies, try using the python3 and pip3 commands instead of python and pip.
 
 First, we need to open the following webpage in our Kali machine, go to the releases page, and scroll to the bottom so we can download the .tar.gz file – https://github.com/Neo23x0/yarGen/releases
+    <img src="307.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+    <img src="308.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+   <img src="309.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+ <br />
+<br />
+
  
  
  Then we need to open a terminal in the location of the downloaded .tar.gz file, and the run the following command to extract YarGen: tar -zxf yarGen-0.18.0.tar.gz. Next we need to use pip to download and install some additional dependencies. Try running the command pip in a terminal. If it states that the command is not found then you need to install python-pip using the command sudo apt-get install python-pip. Now execute the following two commands:
+    <img src="310.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+ <br />
+<br />
 
 sudo pip install pefile cd
 sudo pip install scandir lxml naiveBayesClassifier
