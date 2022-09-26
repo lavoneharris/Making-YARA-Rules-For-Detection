@@ -114,6 +114,7 @@ YARA Rule (Line Breakdown)<br />
    <img src="https://imgur.com/2wixhcA.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
  <br />
 <br />
+ <p align="center">
  5. In Terminal, lets run the command yara HelloString.yara /root/Desktop/YARA\ Demo to see if it flags the file asdf.txt. <br />
     <img src="https://imgur.com/b56ePIw.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
    <img src="https://imgur.com/DhvUAjS.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
