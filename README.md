@@ -222,17 +222,17 @@ Note: During install you may run to issues with yarGen, therefore you need to us
  2. In the Terminal we will had to cd to the location of the .tar.gz.file and run the command: tar -zxf yarGen-0.18.0.tar.gz.<br>
  Note: The command is based on yarGen Version <br>
  Next we install python by running the command: sudo apt-get install python-pip  <br />
-    <img src="310.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
-   <img src="311.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+    <img src="https://imgur.com/3uu54xn.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+   <img src="https://imgur.com/4bHi6kN.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
  <br />
 <br />
 3. Now execute the following two commands: <br />
 sudo pip install pefile cd  <br />
-  <img src="312.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+  <img src="https://imgur.com/RD7l1Hu.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
  <br />
  <br />
 sudo pip install scandir lxml naiveBayesClassifier  <br />
-  <img src="313.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+  <img src="https://imgur.com/VxRaIF3.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
  <br />
  <br />
 4.  cd to move into the extracted YarGen download,and run command to ensure everything is updated properly. <br />
