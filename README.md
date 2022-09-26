@@ -63,7 +63,6 @@ YARA rules are used to classify and identify malware samples by creating descrip
   <img src="https://imgur.com/uOlgYNt.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
  <img src="https://imgur.com/TYfkoxe.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
  <img src="https://imgur.com/LW1URBG.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
-  <img src="https://imgur.com/Ye1Ys4Z.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
 <br />
 <br />
 5. To ensure everything is installed properly we we will run the following command. <br>
