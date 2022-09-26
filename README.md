@@ -205,11 +205,10 @@ Note that in conditions of the .yara file we can use the clauses "AND" & "OR" <b
  
 <h2> Using yarGen:</h2>
 <p align="center">
- 
  YarGen is a python tool that allows us to automatically generate rules for malicious files, this can save time as well as prevent human errors when writing rules.
 
 Note: During install you may run to issues with yarGen, therefore you need to use python3 and pip3 commands instead of python and pip.
-
+<p align="center">
 1. We will need to download yarGen on our Linux VM. <br>
  Begin by downloading the .tar.gz file from the YARA github. Link: https://github.com/Neo23x0/yarGen/releases <br>
   Note: Make sure that this file is downloaded on the Kali Linux VM
