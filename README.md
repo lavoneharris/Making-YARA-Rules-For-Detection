@@ -78,7 +78,7 @@ YARA rules are used to classify and identify malware samples by creating descrip
 
 
 
-<h2> Writing Yara Rules Instructions:</h2>
+<h2> Writing YARA Rules Instructions:</h2>
 <p align="center">
 Yara rules must have three core components that must be included. <br />
 Rules: <br>
@@ -167,3 +167,90 @@ Note that in conditions of the .yara file we can use the clauses "AND" & "OR" <b
 -r // Recursively scan all subfolders within the target location to ensure everything is scanned.<br>
 <br />
 <br />
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<h2> Using yarGen:</h2>
+<p align="center">
+ 
+ YarGen is a python tool that allows us to automatically generate rules for malicious files, this can save time as well as prevent human errors when writing rules.
+
+Note: During install you may run to issues with yarGen, therefore you need to use python3 and pip3 commands instead of python and pip.
+
+1. We will need to download yarGen on our Linux VM. <br>
+ Begin by downloading the .tar.gz file from the YARA github. Link: https://github.com/Neo23x0/yarGen/releases <br>
+  Note: Make sure that this file is downloaded on the Kali Linux VM
+    <img src="https://imgur.com/12WFF6v.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+    <img src="https://imgur.com/CV0UAFw.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+   <img src="https://imgur.com/7k38Dzc.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+ <br />
+<br />
+
+ 2. In the Terminal we will had to cd to the location of the .tar.gz.file and run the command: tar -zxf yarGen-0.18.0.tar.gz.<br>
+ Note: The command is based on yarGen Version <br>
+ Next we install python by running the command: sudo apt-get install python-pip  <br />
+    <img src="https://imgur.com/3uu54xn.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+   <img src="https://imgur.com/4bHi6kN.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+ <br />
+<br />
+3. Now execute the following two commands: <br />
+sudo pip install pefile cd  <br />
+  <img src="https://imgur.com/RD7l1Hu.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+ <br />
+ <br />
+sudo pip install scandir lxml naiveBayesClassifier  <br />
+  <img src="https://imgur.com/VxRaIF3.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+ <br />
+ <br />
+4.  cd to move into the extracted YarGen download,and run command to ensure everything is updated properly. <br />
+ Command: python yarGen.py --update <br />
+ 
+ 5. Example of yarGen using a malicious file. The flags we will use are -m and -o. <br>
+ -m defines the path to the file or files we generate the rules <br>
+ -o defines the name and path of the rules made by yarGen <br>
+ 6. Lets run the command to test our malicious file. <br>
+ Command:  python yarGen.py -m /root/Desktop/Malware -o ./TestRule.yara <br>
+ Breakdown of the Command:<br>
+ python yarGen.py - Runs the yarGen Python script.<br>
+ -m /root/Desktop/Malware - Creates a rule for the files inside the Malware folder.<br>
+ -o ./TestRule.yara - Will output the generated rule to the current folder.<br>
+   <img src="https://imgur.com/6Evxd7T.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+ <br />
+ <br />
+ 7. We will read the rule, using the Command: cat TestRule.yara 
+  <img src="https://imgur.com/rO6UbRw.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+ <br />
+ <br />
