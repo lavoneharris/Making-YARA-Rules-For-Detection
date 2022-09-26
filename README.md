@@ -208,25 +208,35 @@ Note that in conditions of the .yara file we can use the clauses "AND" & "OR" <b
  
  YarGen is a python tool that allows us to automatically generate rules for malicious files, this can save time as well as prevent human errors when writing rules.
 
-Note: During install you may run to issues with yarGen, there fore you need to use python3 and pip3 commands instead of python and pip.
+Note: During install you may run to issues with yarGen, therefore you need to use python3 and pip3 commands instead of python and pip.
 
-1. First, we need to open the following webpage in our Kali machine, go to the releases page, and scroll to the bottom so we can download the .tar.gz file – https://github.com/Neo23x0/yarGen/releases
+1. We will need to download yarGen on our Linux VM. <br>
+ Begin by downloading the .tar.gz file from the YARA github. Link: https://github.com/Neo23x0/yarGen/releases <br>
+  Note: Make sure that this file is downloaded on the Kali Linux VM
     <img src="https://imgur.com/12WFF6v.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
     <img src="https://imgur.com/CV0UAFw.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
    <img src="https://imgur.com/7k38Dzc.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
  <br />
 <br />
 
- 
- 
- Then we need to open a terminal in the location of the downloaded .tar.gz file, and the run the following command to extract YarGen: tar -zxf yarGen-0.18.0.tar.gz. Next we need to use pip to download and install some additional dependencies. Try running the command pip in a terminal. If it states that the command is not found then you need to install python-pip using the command sudo apt-get install python-pip. Now execute the following two commands:
+ 2. In the Terminal we will had to cd to the location of the .tar.gz.file and run the command: tar -zxf yarGen-0.18.0.tar.gz.<br>
+ Note: The command is based on yarGen Version <br>
+ Next we install python by running the command: sudo apt-get install python-pip  <br />
     <img src="310.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+   <img src="311.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
  <br />
 <br />
-
-sudo pip install pefile cd
-sudo pip install scandir lxml naiveBayesClassifier
-Now use cd to move into the extracted YarGen directory, and run the following command to ensure everything is updated: python yarGen.py --update. Great, everything is ready. We can now type the command python yarGen.py --help to see the available options for generating rules with this tool.
+3. Now execute the following two commands: <br />
+sudo pip install pefile cd  <br />
+  <img src="312.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+ <br />
+ <br />
+sudo pip install scandir lxml naiveBayesClassifier  <br />
+  <img src="313.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+ <br />
+ <br />
+4.  cd to move into the extracted YarGen download,and run command to ensure everything is updated properly. <br />
+ Command: python yarGen.py --update <br />
  
  
  
