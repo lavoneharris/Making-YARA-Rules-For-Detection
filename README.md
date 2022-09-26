@@ -93,7 +93,8 @@ Lets create a very simple Yara rule. <br />
   <img src="https://imgur.com/U3cUJJE.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
 <br />
 <br />
- 2. Lets write the Yara Rule. We will save it as HelloString.txt but we will need to change the file extension to .yara to run properly. See screenshot of Yara Rule if further assistance is needed.<br />
+ 2. Lets write the Yara Rule. We will save it as HelloString.txt but we will need to change the file extension to .yara to run properly.<br>
+ See screenshot of Yara Rule if further assistance is needed.<br />
   <img src="https://imgur.com/yHPvbGk.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
   <img src="https://imgur.com/8zQUG6y.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
   <img src="https://imgur.com/To3yIa9.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
