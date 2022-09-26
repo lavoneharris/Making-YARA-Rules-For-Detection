@@ -142,7 +142,9 @@ Note that in conditions of the .yara file we can use the clauses "AND" & "OR" <b
  AND = Allow the rule to flag any files that contain at least two of the strings.<br>
  <br>
  <br>
-10. Lets create two new text files. We will run the command in Terminal again yara -m HelloString.yara /root/Desktop/YARA\ Demo.You will see it flagged. Note: How only two were flagged becuase the file message.txt says "HELLO" and not "hello" so conditions are not met.
+10. Lets create two new text files. We will run the command in Terminal again yara -m HelloString.yara /root/Desktop/YARA\ Demo.You will see it flagged.
+<br> 
+ Note: How only two were flagged becuase the file message.txt says "HELLO" and not "hello" so conditions are not met.
     <img src="https://imgur.com/kZ4aQrL.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
    <img src="https://imgur.com/O13ogbZ.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
    <img src="https://imgur.com/XP4Ag7X.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
@@ -153,7 +155,8 @@ Note that in conditions of the .yara file we can use the clauses "AND" & "OR" <b
     <img src="https://imgur.com/3dJw8py.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
  <br />
 <br />
-12. Run the command again but adding -m and -s to the command so it reads in Terminal: yara -m -s HelloString.yara /root/Desktop/YARA\ Demo. This now provides the meta information amd prints the matching strings for the rule. <br>
+12. Run the command again but adding -m and -s to the command so it reads in Terminal: yara -m -s HelloString.yara /root/Desktop/YARA\ Demo. <br>
+ Note: This now provides the meta information amd prints the matching strings for the rule. <br>
     <img src="https://imgur.com/tncLBRb.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
    <img src="https://imgur.com/tKLonEz.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
  <br />
