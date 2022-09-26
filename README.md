@@ -140,6 +140,8 @@ YARA Rule (Line Breakdown)<br />
 Note that in conditions of the .yara file we can use the clauses "AND" & "OR" <br>
  OR = Allow the rule to flag any files that contain any of the strings.<br>
  AND = Allow the rule to flag any files that contain at least two of the strings.<br>
+ <br>
+ <br>
 10. Lets create two new text files. We will run the command in Terminal again yara -m HelloString.yara /root/Desktop/YARA\ Demo.You will see it flagged. Note: How only two were flagged becuase the file message.txt says "HELLO" and not "hello" so conditions are not met.
     <img src="https://imgur.com/kZ4aQrL.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
    <img src="https://imgur.com/O13ogbZ.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
