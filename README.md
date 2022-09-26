@@ -85,6 +85,8 @@ Rules: <br>
  1. Rule Name <br />
        2. Identification Values (characteristics the rule is searching for)<br />
        3. Condition (defines the condition that the file will be flagged )<br />
+ <br>
+ <br>
 Lets create a very simple Yara rule. <br />
  1. Lets install a text editor,  by going to terminal and entering the commman sudo snap install notepad-plus-plus. Note we can already use mousepad if already installed on Linux.
   <img src="https://imgur.com/U3cUJJE.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
