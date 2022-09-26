@@ -237,7 +237,7 @@ sudo pip install scandir lxml naiveBayesClassifier  <br />
  <br />
 4.  cd to move into the extracted YarGen download,and run command to ensure everything is updated properly. <br />
  Command: python yarGen.py --update <br />
- 
+ <p align="center">
  5. Example of yarGen using a malicious file. The flags we will use are -m and -o. <br>
  -m defines the path to the file or files we generate the rules <br>
  -o defines the name and path of the rules made by yarGen <br>
