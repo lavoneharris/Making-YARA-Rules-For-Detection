@@ -217,7 +217,7 @@ Note: During install you may run to issues with yarGen, therefore you need to us
    <img src="https://imgur.com/7k38Dzc.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
  <br />
 <br />
-
+<p align="center">
  2. In the Terminal we will had to cd to the location of the .tar.gz.file and run the command: tar -zxf yarGen-0.18.0.tar.gz.<br>
  Note: The command is based on yarGen Version <br>
  Next we install python by running the command: sudo apt-get install python-pip  <br />
