@@ -128,7 +128,8 @@ YARA Rule (Line Breakdown)<br />
     <img src="https://imgur.com/N88cNSL.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
  <br />
 <br />
- 8. Run the command again but adding -m to the command so it reads in Terminal: yara -m HelloString.yara /root/Desktop/YARA\ Demo. This now provides the meta information for the rule. <br>
+ 8. Run the command again but adding -m to the command so it reads in Terminal: yara -m HelloString.yara /root/Desktop/YARA\ Demo.<br>
+ This now provides the meta information for the rule. <br>
     <img src="https://imgur.com/vwFmkBE.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
  <br />
 <br />
