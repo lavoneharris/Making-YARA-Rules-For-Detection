@@ -29,7 +29,7 @@ YARA rules are used to classify and identify malware samples by creating descrip
 <h2> Instructions:</h2>
 <p align="center">
  1. We will need to download YARA on our Linux VM. <br>
- Begin by downloading the .tar.gz file from the YARA github. Link: https://github.com/virustotal/yara/releases/tag/v4.0.2. <br>
+ Begin by downloading the .tar.gz file from the YARA github. Link: https://github.com/virustotal/yara/releases/tag/v4.0.2 <br>
   Note: Make sure that this file is downloaded on the Kali Linux VM
 <br/>
 <img src="https://imgur.com/6CTJRwa.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
