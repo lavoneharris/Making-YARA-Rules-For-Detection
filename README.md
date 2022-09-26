@@ -203,12 +203,14 @@ Note that in conditions of the .yara file we can use the clauses "AND" & "OR" <b
  
  
  
+<h2> Using yarGen:</h2>
+<p align="center">
  
- YarGen is a python tool that allows us to automatically generate rules for malicious files, and can save us a lot of time, and prevent human errors when writing rules. We’re going to walk you through installing YarGen, and how to use it. You’ll be doing this in the next threat hunting activity, so make sure you have it installed on your Kali Linux virtual machine!
+ YarGen is a python tool that allows us to automatically generate rules for malicious files, this can save time as well as prevent human errors when writing rules.
 
-If you run into any issues with yargen or its dependencies, try using the python3 and pip3 commands instead of python and pip.
+Note: During install you may run to issues with yarGen, there fore you need to use python3 and pip3 commands instead of python and pip.
 
-First, we need to open the following webpage in our Kali machine, go to the releases page, and scroll to the bottom so we can download the .tar.gz file – https://github.com/Neo23x0/yarGen/releases
+1. First, we need to open the following webpage in our Kali machine, go to the releases page, and scroll to the bottom so we can download the .tar.gz file – https://github.com/Neo23x0/yarGen/releases
     <img src="https://imgur.com/12WFF6v.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
     <img src="https://imgur.com/CV0UAFw.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
    <img src="https://imgur.com/7k38Dzc.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
