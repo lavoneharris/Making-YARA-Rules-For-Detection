@@ -104,6 +104,8 @@ YARA Rule (Line Breakdown)<br />
  Line 1: We defined the rule name as "HelloString" with a short name of Hello. <br />
  Line 3: Declares a file property, this is a text string that will be present in the file. $a variable holds the value of Hello. <br />
  Line 6: Declares the condition that needs to be met to flag the file. $a means if any file scanned containing the string Hello will be flagged. <br />
+ <br>
+ <br>
  3. Create a folder named YARA Demo.<br />
    <img src="https://imgur.com/LfR88qE.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
  <br />
